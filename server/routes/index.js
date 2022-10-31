@@ -15,8 +15,6 @@ let book = require('../models/books');
 
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
-    console.log("mongoose connect uri: " + process.env.URI);
-console.log("db URI: " + DB.URI);
     res.render('content/index', {
         title: 'Home',
         books: ''
