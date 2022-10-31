@@ -19,6 +19,8 @@ let DB = require('./db');
 
 console.log("mongoose connect uri: " + process.env.URI);
 console.log("db URI: " + DB.URI);
+logger.log("mongoose connect uri: " + process.env.URI);
+logger.log("db URI: " + DB.URI);
 mongoose.connect(process.env.URI || DB.URI, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false, });
 
 let mongoDB = mongoose.connection;
